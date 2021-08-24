@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #fan {
+            animation: fanAnimation 0.6s linear 0s;
+            animation-iteration-count: infinite;
+        } */
+
+        @keyframes car1Animation {
+
+            0% {
+                margin-right: 0;
+
+            }
+
+            100% {
+                margin-right: 800px;
+
+            }
+
+        }
+
+        @keyframes car2Animation {
+            0% {
+                top: 0%;
+
+            }
+
+            100% {
+                top: 180px;
+
+            }
+
+        }
+
+        /* @keyframes myAnimation {
+    
+            0% {
+                background: green;
+            }
+    
+            25% {
+                background: yellow;
+                display: none;
+            }
+    
+            50% {
+                background: violet;
+            }
+    
+    
+            75% {
+                background: yellowgreen;
+            }
+    
+            100% {
+                background: tomato;
+            }
+    
+        } */
+
+        /* div{
+        border:2px solid red;
+        height: 300px;
+    } */
+
+        .car1 {
+            animation: car1Animation 4s linear 0s;
+            animation-iteration-count: infinite;
+            float: right;
+            margin-top: 50vh;
+            height: 200px;
+            width: 250px;
+            /* transform: skew(20deg, 10deg); */
+
+            /* transform: scale(-1,1); */
+            /* transform: rotate(90deg); */
+            /* transition: transform 4s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, margin-top 4s linear 0s; */
+        }
+
+        .car2 {
+            animation: car2Animation 4s linear 0s;
+            animation-iteration-count: infinite;
+            height: 150px;
+            width: 150px;
+            /* justify-content: center; */
+            /* position: relative; */
+            margin-left: 45%;
+            position: absolute
+        }
+
+        /* .imgss:hover{
+            margin-top: 200px;
+        } */
+
+
+        /* .imgs:hover {
+            margin-right: 800px;
+            /* transform: scale(0.5); */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <img src="./car2.jpeg" class="car2" alt="">
+    <div>
+        <img src="./car1.jpeg" class="car1" />
+        <!-- <h1>;lsdakasl;dkasl;daskl</h1> -->
+
+    </div>
+
+</body>
+
+</html>

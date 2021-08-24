@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+         .container {
+             width: 100%;
+        
+            /* background: no-repeat;
+            size: 100vh;
+            background-size: cover;  */
+          } 
+
+        .first {
+            height: 30px;
+            background-color: antiquewhite;
+        }
+
+        .spam {
+            color: #9e9e9e;
+            font-size: 10px;
+            padding-left: 83px;
+        }
+
+        .contactno {
+            float: right;
+
+
+        }
+
+        .contact {
+            position: relative;
+            right: 117px;
+            top: 4px;
+            font-size: 10px;
+            color: #9e9e9e;
+
+        }
+
+        .email {
+            position: relative;
+            right: 80px;
+            font-size: 10px;
+            color: #9e9e9e;
+            top: 4px;
+        }
+
+        .phone {
+            height: 15px;
+            position: relative;
+            right: 272px;
+            top: 7px;
+
+        }
+
+        .email {
+            height: 15px;
+            position: relative;
+
+
+        }
+
+        .navbar {
+
+            height: 80px;
+            background: rgba(0, 0, 0, 0.4);
+
+        }
+        .navbar .coverimage{
+           width: 100%;
+
+        }
+
+        .logo {
+            height: 36px;
+            padding: 20px 70px;
+        }
+
+        .navbar ul {
+            float: right;
+            margin-right: 15px;
+            padding-top: 15px;
+
+        }
+
+        .navbar ul li {
+            list-style: none;
+            margin: 20px;
+            display: inline-block;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: seashell;
+            padding: 6px 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar ul .btn{
+            height: 35px;
+            width: 120px;
+            background-color: red;
+            border-radius: 20px;
+            border: 2px solid black;
+            color: yellow;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .navbar ul .btn:hover{
+            background-color: blue;
+        }
+
+        .navbar ul li a:hover {
+            background-color: red;
+            transition: 1s;
+        }
+
+        /* .secondportion{
+           height: 40%;
+        } */
+        /* .coverimage{
+            height: 40%;
+            width: 100%;
+        } */
+        .secondportion{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url(bg1.jpg);
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+        }
+        .secondportion .centerwrite{
+            position:absolute;
+            width: 50%;
+            transform: translate(-50%,-50%);
+            top: 45%;
+            left: 56%;
+        }
+        .secondportion .centerwrite h1,h2{
+            font-size: 50px;
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .secondportion .centerwrite .btn{
+            color: white;
+            height: 40px;
+            width: 165px;
+            background-color: crimson;
+            border-radius: 35px;
+            font-size: 15px;
+            border: 2px solid black;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        .secondportion .centerwrite .btn:hover{
+            background-color: blue;
+        }
+        .secondportion .centerwrite p{
+            color: seashell;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">
+            <span class="spam">Welcome to business pro services We have 32 years of experts
+            </span>
+            <div class="contactno">
+                <span class="contact"> 123456789</span>
+                <span class="email"> 123456@gmail.com </span>
+                <img src="phone.png" class="phone" alt="">
+                <!-- <img src="email.png" alt="" class="email"> -->
+            </div>
+
+        </div>
+
+        <div class="navbar">
+
+            <img src="logo.png" class="logo" alt="">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Feedback</a></li>
+                <button class="btn">Purchase Now</button>
+
+            </ul>
+
+
+           <!-- <div> <img src="bg1.jpg" class="coverimage"  alt=""></div> -->
+
+        </div>
+         <div class="secondportion">
+            <!-- <img src="bg1.jpg" class="coverimage" height="100%" width="100%" alt=""> -->
+             <div class="centerwrite">
+                <h1>We are awsome</h1>
+                <!-- <h2>Hello world</h2> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facilis laboriosam sunt exercitationem quaerat voluptatem reiciendis, a hic error esse animi saepe fugit vero dolorum cumque quidem nihil laborum tempore.</p>
+                <div>
+                    <button class="btn">Explore More</button>
+                    <button class="btn">Purchase Now</button>
+                </div> 
+             </div> 
+
+              
+
+
+
+        </div>
+</body>
+
+</html>

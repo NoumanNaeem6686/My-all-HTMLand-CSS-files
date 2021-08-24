@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navigation ol {
+            list-style: none;
+
+
+        }
+        
+
+        .main-nav {
+            background-color: tomato;
+            height: 20px;
+
+        }
+        .main-nav ol li:hover{
+            background-color: violet;
+            height: 20px;
+            width: 70px;
+        }
+
+        /* .main-nav ol  li{
+            list-style: none;
+            display: inline-block;
+            margin-left: 50px;
+
+        } */
+        .navigation>li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        .inner {
+            display: none;
+            position: absolute;
+            background: teal;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .home:hover .inner {
+            display: list-item;
+
+
+        }
+        .m-inner{
+            list-style: none;
+
+        }
+        .m-inner{
+            display: none;
+            position: absolute;
+        }
+        .about:hover .m-inner{
+            display: list-item;
+            background-color: turquoise;
+            padding:15px;
+            margin-left: 60px;
+            margin-top: 0px;
+        }
+        .about{
+            position:relative;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <ol class="navigation">
+            <li class="home">Home
+                <ol class="inner">
+                    <li>home</li>
+                    <li class="about">About
+                        <ol class="m-inner">
+                            <li>About</li>
+                            <li>yes</li>
+                            <li>hello</li>
+                            <li>yess</li>
+                        </ol>
+                    </li>
+                    <li>Services</li>
+                    <li>Feedback</li>
+                </ol>
+            </li>
+            <li>About</li>
+            <li>Feedback</li>
+            <li>Services</li>
+        </ol>
+    </nav>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        nav{
+            background: sienna;
+            color:white;
+        }
+
+        .outer > li {
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 50px;
+        }
+
+        .m-menu:hover .inner{
+            display: list-item;
+        }
+
+        .inner li:hover{
+            background: black;
+            cursor: pointer;
+        }
+
+        .inner{
+            list-style-type: none;
+            position: absolute;
+            background: sienna;
+            padding: 10px;
+            display: none;
+            /* top:80px; */
+        }
+
+        .m-inner{
+            list-style-type: none;
+            position: absolute;
+            left:50px;
+            padding:10px;
+            display: none;
+            background: sienna;
+
+        }
+
+
+        .mn-menu:hover .m-inner{
+            display: list-item;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ol class="outer">
+            <li class="m-menu">Provinces
+
+                <ol class="inner">
+                    <li class="mn-menu">Punjab
+
+                        <ol class="m-inner">
+                            <li>Faisalabad</li>
+                            <li>Lahore</li>
+                            <li>Gojra</li>
+                            <li>MUltan</li>
+                        </ol>
+
+
+                    </li>
+                    <li>NWFP</li>
+                    <li>Sindh</li>
+                    <li>Balochistan</li>
+                </ol>
+
+            </li>
+
+
+            <li>About</li>
+            <li>Contact</li>
+            <li>Signup</li>
+        </ol>
+    </nav>
+
+</body> -->

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        #parent{
+            width:600px;
+            height: 600px;
+            border: 1px solid red;
+        }
+        
+        ol li:hover{
+            background: gainsboro;;
+        }
+        
+        ol li::after{
+            content: "";
+            width: 50px;
+            height: 2px;
+            background-color: red;
+            position: absolute;
+            bottom: 5px;
+            left: 16px;
+        }
+        
+        ol li{
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+            padding: 8px 19px;
+            /* border-bottom:1px solid red; */
+        }
+        
+        </style>
+        
+</head>
+<body>
+    <div id="parent">
+    
+    
+        <ol>
+            <li>About</li>
+            <li>Login</li>
+            <li>Signup</li>
+        </ol>
+    
+    
+    </div>
+    
+</body>
+</html>
+
+
+
+    
+    
+    <!-- <style>
+        .apple {
+            width: 100px;
+            position: absolute;
+            top: 90vh;
+        }
+    
+        #scoreWalaBox {
+            position: absolute;
+            right: 100px;
+            top: 0;
+        }
+    
+        #gameOverBox {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+            display: none;
+        }
+    </style>
+    
+    
+    
+    <img id="gameOverBox" src="game-over.jpg" alt="">
+    
+    <div id="scoreWalaBox">
+    
+        <h1>ScoreBox
+            <span id="scoreBox">0</span>
+        </h1>
+    
+    
+    </div>
+    
+    <div id="appleWalaBox">
+    
+    </div>
+    
+    <script>
+    
+        let huntScore = 5;
+        let currentScore = 0;
+    
+        // let gameVelocity
+    
+        let gameOver = false;
+    
+        let sound = document.createElement('audio');
+        sound.src = "sound.mp3";
+    
+        let keys = [];
+    
+        function onGameOver() {
+    
+            gameOver = true;
+    
+            gameOverBox.style.display = "inline";
+    
+            clearInterval(appleGeneration);
+    
+            keys.forEach((key) => {
+                clearInterval(key);
+            })
+    
+        }
+    
+        let appleGeneration = setInterval(() => {
+    
+    
+            let apple = document.createElement('img');
+            apple.src = "apple.jpg";
+            apple.className = "apple";
+    
+            apple.style.left = (Math.random() * innerWidth) + 'px';
+    
+            appleWalaBox.appendChild(apple);
+    
+            apple.onclick = () => {
+    
+                if (gameOver) {
+                    return;
+                }
+    
+                currentScore += huntScore;
+    
+                scoreBox.innerText = currentScore;
+                apple.remove();
+                sound.currentTime = 0;
+                sound.play();
+    
+            }
+    
+            let key = setInterval(() => {
+    
+                if (apple.parentNode && apple.offsetTop <= 0) {
+                    onGameOver();
+                }
+    
+                apple.style.top = (apple.offsetTop - 5) + 'px';
+    
+            }, Math.random() * 100)
+    
+            keys.push(key);
+    
+        }, 1000 + Math.random() * 1000)
+    
+    </script> -->
+    
+    
+    
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #truck {
+                position: absolute;
+                top: 100px;
+                width: 150px;
+            }
+        </style>
+    
+    </head>
+    
+    <body>
+    
+    
+        <button onclick="moveLeft()">Move Left</button>
+        <button onclick="moveRight()">Move Right</button>
+        <button onclick="stop()">Stop</button>
+    
+        <img id="truck" src="car1.png" alt="">
+    
+        <script>
+    
+            let direction = "";
+            let keys = []
+    
+            document.body.onkeydown = (evt) => {
+    
+                switch (evt.keyCode) {
+    
+                    case 37:
+                        direction = "left";
+                        break;
+    
+                    case 38:
+                        direction = "top";
+                        break;
+    
+                    case 39:
+                        direction = "right";
+                        break;
+    
+                    case 40:
+                        direction = "bottom";
+                        break;
+    
+                }
+    
+            }
+    
+    
+            function moveTop() {
+    
+                // key = setInterval(moveFunction, 10);
+    
+                // keys.push(key);
+    
+                direction = "top";
+            }
+    
+            function moveBottom() {
+    
+                // key = setInterval(moveFunction, 10);
+    
+                // keys.push(key);
+    
+                direction = "bottom";
+            }
+    
+            function moveLeft() {
+    
+                // key = setInterval(moveFunction, 10);
+    
+                // keys.push(key);
+    
+                direction = "left";
+            }
+    
+            function moveRight() {
+    
+                // key = setInterval(moveFunction, 10);
+    
+                // keys.push(key);
+    
+                direction = "right";
+            }
+    
+    
+    
+            function moveFunction() {
+    
+                if (direction == "left") {
+    
+                    if(truck.offsetLeft <=0){
+                        direction = "";
+    
+                    }
+    
+                    truck.style.left = (truck.offsetLeft - 1) + 'px';
+    
+                } else if (direction == "right") {
+    
+                    truck.style.left = (truck.offsetLeft + 1) + 'px';
+    
+                } else if (direction == "top") {
+    
+                    if (truck.offsetTop <= 0) {
+                        direction = "";
+                    }
+    
+                    truck.style.top = (truck.offsetTop - 1) + 'px';
+    
+                } else if (direction == "bottom") {
+    
+                    truck.style.top = (truck.offsetTop + 1) + 'px';
+    
+                }
+    
+            }
+    
+            key = setInterval(moveFunction, 1000);
+    
+    
+            function stop() {
+                // keys.forEach((key)=>{
+                direction = "";
+                // clearInterval(key);
+    
+                // })
+    
+                // keys.length = 0;
+    
+            }
+    
+    
+        </script>
+    
+    </body>
+    
+    </html> -->

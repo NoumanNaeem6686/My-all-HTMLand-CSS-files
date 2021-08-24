@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box {
+            height: 100px;
+            width: 100px;
+            background-color: indigo;
+            border: 1px solid;
+        } */
+        .grids{
+            height: 300px;
+            width: 300px;
+        }
+        .box:nth-child(1){
+            grid-area: area1;
+            background-color: lightseagreen;
+        }
+        
+        .box:nth-child(2){
+            grid-area: area2;
+            background-color: green;
+        }
+        .box:nth-child(3){
+            grid-area: area3;
+            background-color: indianred;
+        }
+        .box:nth-child(4){
+            grid-area: area4;
+            background-color: lightcoral;
+
+        }
+        .box:nth-child(5){
+            grid-area: area5;
+            background-color: red;
+
+        }
+        .box:nth-child(6){
+            grid-area: area6;
+            background-color: rgb(129, 17, 221);
+
+        }
+        
+        
+       .grids{ 
+            display: grid;
+            grid-template-columns: 3;
+            grid-template-rows: 3;
+            grid-template: "area1 area2 area3"
+                           "area4 area5 area5"
+                           "area6 area5 area5";
+            column-gap: 10px;
+            row-gap: 10px;               
+            
+        } 
+    
+    </style>
+</head>
+
+<body>
+    <div class="grids">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+ </body> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.container{
+    height: 700px;
+    /* width: 700px; */
+    background-color: salmon;
+    display: grid;
+    grid-template-columns: 133px 133px 133px;
+    grid-template-rows: 133px 133px 133px;
+    row-gap: 10px;
+    column-gap: 10px;
+    /* fr ka matlb hai jitni b space hai uska 1 fraction */
+    /* grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3 , 1fr); */
+
+    /* aik tareka uper wala hai or second tareqa aisy b likh sakty hain */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120px 1fr 120px;
+    justify-content: center;
+}
+.iteams{
+    /* height: 122px;
+    width: 122px; */
+    background-color: blueviolet;
+    
+}
+.iteams1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: chartreuse;
+    
+}
+/* .iteams6{
+    grid-row-start: 1;
+    grid-row-end: 3;
+} */
+.footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: chartreuse;
+
+}
+.text{
+    font-size: 20px;
+    font-weight:bold;
+    
+
+}
+.img{
+    height: 50vh;
+    width: 40vw;
+}
+.footer{
+    /* place self tb use krty hain jb aik sath justify content or align iteams use krna ho.. to 2no use krny ki bjye just place self use krlo to 2no ka km hojye ga is aik property sy */
+    /* place-self: center; */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="iteams iteams1"><span class="text">This is header</span></div>
+        <div class="iteams">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+        </div>
+        <div class="iteams">
+            <img src="./FashionImg/img.png" class="img"  calt="">
+        </div>
+        
+        <div class="iteams iteams6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae delectus ex iusto eos officia distinctio dolore laboriosam quaerat? Architecto, deleniti. Iste eos voluptate fugiat delectus consectetur repellendus neque aliquam labore.
+        </div>
+        <div class="iteams footer"><span class="text">This is Footer</span></div>
+        
+    </div>
+</body>
+</html>
