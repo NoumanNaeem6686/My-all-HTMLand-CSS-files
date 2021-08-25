@@ -134,7 +134,8 @@
     font-size: 27px;
 }
 #thirdSection{
-    margin-top: 30px;
+    position: relative;
+    bottom: 150px;
     
 
 }
@@ -161,13 +162,13 @@
     align-items: center;
 }
 .clients img{
-    height: 170px;
+    height: 120px;
 }
 .client-items{
     padding: 35px;
 }
 #client-section{
-    height: 344px;
+    height: 455px;
     /* position: relative; */
 }
 #client-section::before{
