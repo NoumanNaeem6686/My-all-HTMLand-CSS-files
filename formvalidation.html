@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        .mainerror {
+            color: red;
+        }
+
+        #formemail {
+            margin: 20px;
+        }
+
+        #phone {
+            margin: 20px;
+        }
+
+        #pass {
+            margin: 20px;
+        }
+
+        .btn {
+            margin: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form name="Myform" onsubmit="return validateform()">
+        <div>
+            Name: <input type="text" name="fname" id="name"><b><span class="mainerror"></span></b>
+        </div>
+        <div>
+            email: <input type="text" name="femail" id="email"><b><span class="mainerror"></span></b>
+        </div>
+        <div>
+            contact no: <input type="text" name="fphone" id="phone"><b><span class="mainerror"></span></b>
+        </div>
+        <div>
+            password: <input type="password" name="fpass" id="pass"><b><span class="mainerror"></span></b>
+        </div>
+        <div>
+            confirm password: <input type="password" name="fcpass" id="cpass"><b><span class="mainerror"></span></b>
+        </div>
+        <div>
+            <input type="submit" class="btn">
+
+        </div>
+
+
+    </form>
+
+
+    <script>
+        // function clearAll() {
+        //     let errors = document.getElementsByClassName('mainerror');
+        //     for (let item of errors) {
+        //         item.innerHTML = "";
+        //     }
+        // }
+
+        // function validateform() {
+        //     clearAll();
+        //     let returnval = true;
+        //     let name = document.forms['Myform']['fname'].value;
+        //     if (name.length < 8) {
+        //         seterror('name', '*length is too short');
+        //         returnval = false
+        //     }
+        //     let email = document.forms['Myform']['femail'].value;
+        //     if (email.length > 15) {
+        //         seterror('formemail', '*email length too long');
+        //         returnval = false
+        //     }
+        //     if (email.search([/@/])) {
+        //         seterror('formemail', '*please enter @');
+        //         returnval = false
+        //     }
+        //     let phone = document.forms['Myform']['fphone'].value;
+        //     if (phone.length > 8) {
+        //         seterror('phone', '*phone length too long');
+        //         returnval = false
+        //     }
+        //     if(isNaN(phone)){
+        //         seterror('phone', 'character values are not allowed in this filed')
+        //     }
+        //     let pass = document.forms['Myform']['fpass'].value;
+        //     if (pass.length < 8) {
+        //         seterror('pass', '*password length too short');
+        //         returnval = false
+        //     }
+        //     if (pass.search([0 - 9])) {
+        //         seterror('pass', '*please provide at leat 1 numaric value');
+        //         returnval = false
+
+        //     }
+        //     if (pass.search(/[a-z]/)) {
+        //         seterror('pass', '*please provide at leat 1 LowerCase value');
+        //         returnval = false
+
+        //     }
+        //     if (pass.search(/[A-Z]/)) {
+        //         seterror('pass', '*please provide at leat 1 Uppercase value');
+        //         returnval = false
+
+        //     }
+        //     if (pass.search(/[!\@\#\$\%\^\&\*\(\)\',]/)) {
+        //         seterror('pass', '*please provide at leat 1 Special character');
+        //         returnval = false
+
+        //     }
+
+        //     // if(pass.search([a-z]==-1)){
+        //     //     seterror('pass', '*please provide at leat 1 lowercase');
+        //     //     returnval = false
+
+        //     // }
+        //     // if(pass.search([A-Z]==-1)){
+        //     //     seterror('pass', '*please provide at leat 1 Uppercase');
+        //     //     returnval = false
+
+        //     // }
+
+        //     let cpass = document.forms['Myform']['fcpass'].value;
+        //     if (cpass === pass) {
+        //         seterror('cpass', '');
+
+        //         returnval = false
+        //     }
+        //     if (cpass != pass) {
+        //         seterror('cpass', '*please enter same password');
+        //         returnval = false
+
+        //     }
+
+        //     return returnval;
+        // }
+
+        // function seterror(id, errormsg) {
+        //     let element = document.getElementById(id);
+        //     // let dispalaymsg = document.getElementById('mainerror');
+        //     element.getElementsByClassName('mainerror')[0].innerHTML = errormsg;
+        //     // element.dispalaymsg.innerHTML = errormsg;
+
+
+        // }
+
+
+function clearForm(){
+    let errors = document.getElementsByClassName('mainerror');
+            for (let item of errors) {
+                item.innerHTML = "";
+            }
+
+}
+
+
+        //// using if else statement///
+        function validateform() {
+            clearForm();
+            let formName = document.getElementById('name').value;
+            let formEmail = document.getElementById('email').value;
+            let formPhone = document.getElementById('phone').value;
+            let formPassword = document.getElementById('pass').value;
+            let formCpassword = document.getElementById('cpass').value;
+            if(formName.length > 10){
+                document.getElementsByClassName('mainerror')[0].innerHTML = "*Name is too long";
+                return false;
+            }
+            if(formEmail.length > 15){
+                document.getElementsByClassName('mainerror')[1].innerHTML = "*Email is too long";
+                return false;
+            }
+            if(formPhone .length > 12){
+                document.getElementsByClassName('mainerror')[2].innerHTML = "*phone number is too long";
+                return false;
+            }
+            if(formPassword.length < 12){
+                document.getElementsByClassName('mainerror')[3].innerHTML = "*password  is too short";
+                return false;
+            }
+            if(formPassword.search([0-9])){
+                document.getElementsByClassName('mainerror')[3].innerHTML = "*Please atleast one numeric value";
+                return false;
+
+            }
+            if(formPassword.search([A-Z])){
+                document.getElementsByClassName('mainerror')[3].innerHTML = "*Please atleast one UpperCase letter";
+                return false;
+
+            }
+            if(formPassword === formCpassword){
+                document.getElementsByClassName('mainerror')[4].innerHTML = "*password match successfull";
+                return false;
+
+            }
+            else {
+                document.getElementsByClassName('mainerror')[4].innerHTML = "*Please enter same password";
+                return false;
+
+            }
+
+           
+
+            // if(MyName.length < 8){
+            //     MyError.innerHTML = "*strength is too short";
+            //     return false
+            // }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <style>
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="question">1) 2 + 3 = ?</div>
+    <input type="radio" name="question1" id="correct1"> 5
+    <input type="radio" name="question1" id=""> 7
+    <input type="radio" name="question1" id=""> 10
+    <input type="radio" name="question1" id=""> 15
+    <hr>
+    <div class="question">2) 6 * 3 = ?</div>
+    <input type="radio" name="question2" id=""> 25
+    <input type="radio" name="question2" id=""> 12
+    <input type="radio" name="question2" id="correct2"> 18
+    <input type="radio" name="question2" id=""> 15
+    <hr>
+    <div class="question">3) 25 * 3 = ?</div>
+    <input type="radio" name="question3" id=""> 76
+    <input type="radio" name="question3" id=""> 95
+    <input type="radio" name="question3" id=""> 18
+    <input type="radio" name="question3" id="correct3"> 75
+    <hr>
+    <div class="question">3) Capital of Pakistan ?</div>
+    <input type="radio" name="question4" id=""> Karachi
+    <input type="radio" name="question4" id="correct4"> Islamabad
+    <input type="radio" name="question4" id=""> Lahore
+    <input type="radio" name="question4" id=""> Multan
+    <hr>
+    <div class="question">3) Prime Minister of Pakistan ?</div>
+    <input type="radio" name="question5" id="correct5"> ImranKhan
+    <input type="radio" name="question5" id=""> Musharaf
+    <input type="radio" name="question5" id=""> Yousaf
+    <input type="radio" name="question5" id=""> Raheel shreff
+    <hr>
+    <div class="question">3) Biggest City of Pakistan ?</div>
+    <input type="radio" name="question5" id=""> Peshawer
+    <input type="radio" name="question5" id="correct6"> Karachi
+    <input type="radio" name="question5" id=""> Lahore
+    <input type="radio" name="question5" id=""> Islamabad
+    <hr>
+
+    <button onclick="showResult()"> click to get result</button>
+
+    <div class="question" id="result"></div><span id="img"></span>
+
+
+    <script>
+        function showResult() {
+            let score = 0;
+
+            if (document.getElementById('correct1').checked) {
+                score = score + 5;
+
+            }
+            if (document.getElementById('correct2').checked) {
+                score = score + 5;
+
+            }
+            if (document.getElementById('correct3').checked) {
+                score = score + 5;
+
+            }
+            if (document.getElementById('correct4').checked) {
+                score = score + 5;
+
+            }
+            if (document.getElementById('correct5').checked) {
+                score = score + 5;
+
+            }
+            if (document.getElementById('correct6').checked) {
+                score = score + 5;
+
+            }
+            if (score > 15) {
+                let result = document.getElementById('result');
+                result.innerHTML = 'your score is ' + score +' you are pass';
+                let img = document.getElementById('img');
+                img.innerHTML = "<img src = ./cong.jpg />"
+
+
+            }
+            else {
+                //  result =  document.getElementById('result');
+                result.innerHTML = 'your score is ' + score +' sorry you are fail';
+                img.innerHTML = "<img src = ./sorry.png />"
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>

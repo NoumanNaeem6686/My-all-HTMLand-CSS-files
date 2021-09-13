@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //// slice , substring ,  str functions////
+
+        /// slice starting or ending value laita hai. ending value jo b rakho gy us sy aik km e print kry ga.
+        /// for example agr ap starting value 1 or ending 6 rakho gy to 1 sy 5 tk print kry ga
+
+
+        // let newstr = 'hello world how are you';
+        // let resultedstr = newstr.slice(1,11);
+        // console.log(resultedstr);
+
+
+
+        //// substring////
+
+
+
+
+        /// slice wala same function hum substring k through b kr sakty hain same result aye ga
+        /// bs difference ya hai k slice negative value ly sakta hai jb k substring negative value nai ly sakta
+
+
+        // let newstr = 'hello world how are you';
+        // let resultedstr = newstr.substring(0,11);
+        // console.log(resultedstr);
+
+
+
+
+
+        ///// substr function b aik string function hai is main pehli value index(number) ko represent krti hai
+        /// or 2nd value length ko represent krti hai k string ki kitni length hogi.
+
+        // let newstr = 'hello world how are you';
+        // let resultedstr = newstr.substr(0,10);
+        // console.log(resultedstr);
+
+
+
+
+        ///// replace function, pehli value wo hoti jis ki jagha ap new value add krna chahta or 2nd py jo value rakhna chahty wo ati
+
+        // let newstr = 'hello world how are you';
+        // let replaced = newstr.replace('how are you' , 'can i talk to you?')
+        // console.log(newstr.toUpperCase());
+        // console.log(replaced);
+        // let char2 = newstr.charAt(1);
+        //  char2 = newstr.charCodeAt(1);
+        // console.log(char2);
+
+
+
+        ///// trim function white spaces khatm krny k liya use hota hai.. ya just first or last sy spaces khtm krta hai
+
+        // let whitespace = '      hello    how are you    ';
+        // console.log(whitespace);
+        // console.log(whitespace.trim());
+
+
+
+
+
+        //// personal practice for all string functions////
+
+        // string slice//
+
+        let newstr = 'hello nouman kaisy ho yar';
+        resultedstr = newstr.slice(0, 12);
+        console.log(resultedstr);
+
+
+        // substring//
+        let substr = 'hello world howa are you?';
+        let finalstr = substr.substring(1, 15);
+        console.log(finalstr);
+
+        // substr//
+
+        let newsubstr = 'hello world can i talk to you?';
+        let resultedsubstr = newsubstr.substr(0, 10);
+        console.log(resultedsubstr);
+
+        /// string replace function and also using upper case and lower case function//
+
+        let newReplace = newsubstr.replace('can i talk to you?', 'main ap sy bat kr sakta hn?(replace hony k bad)')
+        console.log(newsubstr);
+        console.log(newReplace.toLocaleUpperCase());
+
+        /// trim function//
+
+        let newtrim = "   han yar abi nai    asakta main    ";
+        console.log(newtrim.trim());
+
+        /// using charat function to find the character number of string///
+        
+        let charnum = newtrim.charAt(9);
+        console.log(charnum);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
