@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #fruit{
+            height: 250px;
+            width: 250px;
+            border: 5px solid black;
+            border-radius: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <div id="fruit"></div>
+    <button id="btn" onclick = ShowApple()>Show Apple</button>
+    <button id="btn1" onclick = ShowStrawbery() class="abc">Show Strawbery</button>
+    <button id="btn2" onclick= ShowPeach()>Show peach</button>
+    
+    <script>
+       
+        function ShowApple(){
+            let btn = document.getElementById('btn');
+            let btn1 = document.getElementById('btn1');
+            let btn2 = document.getElementById('btn2');
+            // let clas = btn1.getAttribute('class');
+            // console.log(clas);
+        let fruit = document.getElementById('fruit');
+            fruit.innerHTML = '<img src= ./apple.jpg />'
+            btn.hidden = true;
+            btn2.hidden = false;
+            
+        }
+        function ShowStrawbery(){
+        let fruit = document.getElementById('fruit');
+        btn2.hidden = true
+        btn.hidden = false;
+            fruit.innerHTML = '<img src= ./strawbery.jpeg  />'
+        }
+        function ShowPeach(){
+        let fruit = document.getElementById('fruit');
+            fruit.innerHTML = '<img src= ./peach2.png />'
+            btn2.hidden = true
+        }
+        function HideImage(){
+            fruit.innerHTML.hidden = true
+            
+        }
+
+    </script>
+</body>
+</html>
